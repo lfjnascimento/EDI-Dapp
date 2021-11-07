@@ -20,7 +20,9 @@ async function requestUserAcc(){
   return accts[0];
 }
 
-export default {
+const metamask = {
   getUserAcc,
   requestUserAcc
 }
+
+export default metamask;
