@@ -5,6 +5,8 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Chip from '@mui/material/Chip';
 
+import Admin from './pages/Admin/Admin';
+
 import metamask from './services/metamask';
 
 function App() {
@@ -18,6 +20,7 @@ function App() {
   }
 
   function logout(){
+    metamask.disconnect();
     setUserAcc('');
     setIsUserLogged(false);
   }
@@ -28,7 +31,7 @@ function App() {
     setDisableConnectBtn(false);
   }
 
-  useEffect(() =>{
+  useEffect(() => {
     metamask.getUserAcc().then((acc) => {
       if(acc)
         login(acc);
@@ -50,17 +53,20 @@ function App() {
     </AppBar>
     
     <Box sx={{display: 'flex', justifyContent: 'center'}}>
-      <Box 
-      component="main" 
-      sx={{
-        width: '100%', 
-        maxWidth: '800px',
-        display: () => (isUserLogged)? 'block' : 'none',
-        }}>
+      {
+        isUserLogged &&
+        <Box 
+          component="main" 
+          sx={{
+            width: '100%', 
+            maxWidth: '800px'
+          }}
+        >
 
-        site body
+          <Admin />
 
-      </Box>
+        </Box>
+      }
     </Box>
     </>
   );
