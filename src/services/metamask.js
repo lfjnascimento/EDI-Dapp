@@ -2,11 +2,16 @@ import detectEthereumProvider from '@metamask/detect-provider'
 
 let provider = null;
 
+
 async function getProvider(){
   if(!provider)
     provider = await detectEthereumProvider({ mustBeMetaMask: true });
   
   return provider;
+}
+
+function disconnect(){
+  provider = null;
 }
 
 async function getUserAcc(){
@@ -22,6 +27,7 @@ async function requestUserAcc(){
 
 const metamask = {
   getProvider,
+  disconnect,
   getUserAcc,
   requestUserAcc
 }
