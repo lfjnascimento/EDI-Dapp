@@ -1,0 +1,637 @@
+[
+  {
+    "inputs": [],
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+  },
+  {
+    "inputs": [],
+    "name": "IES_CNPJ",
+    "outputs": [
+      {
+        "internalType": "string",
+        "name": "",
+        "type": "string"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "IES_acronym",
+    "outputs": [
+      {
+        "internalType": "string",
+        "name": "",
+        "type": "string"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "IES_name",
+    "outputs": [
+      {
+        "internalType": "string",
+        "name": "",
+        "type": "string"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "_name",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_academic_degree",
+        "type": "string"
+      }
+    ],
+    "name": "addCourse",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_issuer",
+        "type": "address"
+      }
+    ],
+    "name": "addIssuer",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "_CPF",
+        "type": "string"
+      },
+      {
+        "internalType": "uint16",
+        "name": "_course_ID",
+        "type": "uint16"
+      },
+      {
+        "internalType": "string",
+        "name": "_name",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_nationality",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_RG_number",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_RG_agency",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_RG_UF",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_birthplace",
+        "type": "string"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_birthdate",
+        "type": "uint256"
+      }
+    ],
+    "name": "addStudent",
+    "outputs": [
+      {
+        "internalType": "bytes32",
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "admin",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint16",
+        "name": "_ID",
+        "type": "uint16"
+      },
+      {
+        "internalType": "string",
+        "name": "_name",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_academic_degree",
+        "type": "string"
+      }
+    ],
+    "name": "changeCourse",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint16",
+        "name": "",
+        "type": "uint16"
+      }
+    ],
+    "name": "courses",
+    "outputs": [
+      {
+        "internalType": "uint16",
+        "name": "ID",
+        "type": "uint16"
+      },
+      {
+        "internalType": "string",
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "academic_degree",
+        "type": "string"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "_student_CPF",
+        "type": "string"
+      },
+      {
+        "internalType": "uint16",
+        "name": "_course_ID",
+        "type": "uint16"
+      },
+      {
+        "internalType": "string",
+        "name": "_number",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_register_number",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_process_number",
+        "type": "string"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_completion_date",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_graduation_date",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_registration_date",
+        "type": "uint256"
+      }
+    ],
+    "name": "createDegree",
+    "outputs": [
+      {
+        "internalType": "bytes32",
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "name": "degrees",
+    "outputs": [
+      {
+        "internalType": "bytes32",
+        "name": "ID",
+        "type": "bytes32"
+      },
+      {
+        "internalType": "string",
+        "name": "number",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "register_number",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "process_number",
+        "type": "string"
+      },
+      {
+        "internalType": "uint256",
+        "name": "completion_date",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "graduation_date",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "issue_date",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "registration_date",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint16",
+        "name": "course_ID",
+        "type": "uint16"
+      },
+      {
+        "components": [
+          {
+            "internalType": "string",
+            "name": "name",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "nationality",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "RG_number",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "RG_agency",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "RG_UF",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "birthplace",
+            "type": "string"
+          },
+          {
+            "internalType": "uint256",
+            "name": "birthdate",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct Student",
+        "name": "student",
+        "type": "tuple"
+      },
+      {
+        "internalType": "bool",
+        "name": "is_valid",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getCourses",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint16",
+            "name": "ID",
+            "type": "uint16"
+          },
+          {
+            "internalType": "string",
+            "name": "name",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "academic_degree",
+            "type": "string"
+          }
+        ],
+        "internalType": "struct Course[]",
+        "name": "",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "_student_CPF",
+        "type": "string"
+      },
+      {
+        "internalType": "uint16",
+        "name": "_course_ID",
+        "type": "uint16"
+      }
+    ],
+    "name": "getDegreeByCPFAndCourse",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "bytes32",
+            "name": "ID",
+            "type": "bytes32"
+          },
+          {
+            "internalType": "string",
+            "name": "number",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "register_number",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "process_number",
+            "type": "string"
+          },
+          {
+            "internalType": "uint256",
+            "name": "completion_date",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "graduation_date",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "issue_date",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "registration_date",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint16",
+            "name": "course_ID",
+            "type": "uint16"
+          },
+          {
+            "components": [
+              {
+                "internalType": "string",
+                "name": "name",
+                "type": "string"
+              },
+              {
+                "internalType": "string",
+                "name": "nationality",
+                "type": "string"
+              },
+              {
+                "internalType": "string",
+                "name": "RG_number",
+                "type": "string"
+              },
+              {
+                "internalType": "string",
+                "name": "RG_agency",
+                "type": "string"
+              },
+              {
+                "internalType": "string",
+                "name": "RG_UF",
+                "type": "string"
+              },
+              {
+                "internalType": "string",
+                "name": "birthplace",
+                "type": "string"
+              },
+              {
+                "internalType": "uint256",
+                "name": "birthdate",
+                "type": "uint256"
+              }
+            ],
+            "internalType": "struct Student",
+            "name": "student",
+            "type": "tuple"
+          },
+          {
+            "internalType": "bool",
+            "name": "is_valid",
+            "type": "bool"
+          }
+        ],
+        "internalType": "struct Degree",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getDegreeIDs",
+    "outputs": [
+      {
+        "internalType": "bytes32[]",
+        "name": "",
+        "type": "bytes32[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getIssuers",
+    "outputs": [
+      {
+        "internalType": "address[]",
+        "name": "",
+        "type": "address[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint16",
+        "name": "_ID",
+        "type": "uint16"
+      }
+    ],
+    "name": "hasCourse",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "_ID",
+        "type": "bytes32"
+      }
+    ],
+    "name": "hasDegree",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_issuer",
+        "type": "address"
+      }
+    ],
+    "name": "hasIssuer",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "_ID",
+        "type": "bytes32"
+      }
+    ],
+    "name": "invalidateDegree",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "name": "issuers",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_issuer",
+        "type": "address"
+      }
+    ],
+    "name": "removeIssuer",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  }
+]
