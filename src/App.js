@@ -1,5 +1,11 @@
 import { useState, useEffect } from 'react';
 
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+} from "react-router-dom";
+
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -62,10 +68,13 @@ function App() {
             maxWidth: '800px'
           }}
         >
-
-          {/* <Admin /> */}
-          <Issue/>
-
+          <Router>
+            <Routes>
+              <Route path='/' element={<Admin/>} />
+              <Route path='/Admin' element={<Admin/>} />
+              <Route path='/issue' element={<Issue/>} />
+            </Routes>
+          </Router>
         </Box>
       }
     </Box>
