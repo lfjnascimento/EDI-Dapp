@@ -6,7 +6,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Chip from '@mui/material/Chip';
 
 import Admin from './pages/Admin/Admin';
-
+import Issue from './pages/Issue';
 import metamask from './services/metamask';
 
 function App() {
@@ -63,7 +63,8 @@ function App() {
           }}
         >
 
-          <Admin />
+          {/* <Admin /> */}
+          <Issue/>
 
         </Box>
       }

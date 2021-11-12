@@ -51,6 +51,54 @@ async function deleteIssuer(issuer){
   return contract.removeIssuer(issuer);
 }
 
+async function getIDS(issuer){
+  const contract = await getContract(); 
+  return contract.getDegreeIDs();
+}
+
+async function addNewDegree(
+  studentName,
+  studentCPF,
+  studentRGNumber,
+  studentRGAgency,
+  studentRGUF,
+  studentNationality,
+  studentBirthplace,
+  studentBirthDate,
+  degreeNumber,
+  degreeRegister,
+  degreeProcess,
+  degreeCompletionDate,
+  degreeGraduationDate,
+  degreeRegistrationDate,
+  courseId,
+){
+  const contract = await getContract(); 
+  const txResponse = await contract.createDegree(
+    studentCPF,
+    courseId,
+    degreeNumber,
+    degreeRegister,
+    degreeProcess,
+    degreeCompletionDate.getTime(),
+    degreeGraduationDate.getTime(),
+    degreeRegistrationDate.getTime(),
+  );
+
+  await txResponse.wait();
+  return contract.addStudent(
+    studentCPF,
+    courseId,
+    studentName,
+    studentNationality,
+    studentRGNumber,
+    studentRGAgency,
+    studentRGUF,
+    studentBirthplace,
+    studentBirthDate.getTime(),
+  );
+}
+
 const contract = {
   addNewCourse,
   editCourse,
@@ -58,5 +106,7 @@ const contract = {
   addNewIssuer,
   getIssuers,
   deleteIssuer,
+  addNewDegree,
+  getIDS
 }
 export default contract;
