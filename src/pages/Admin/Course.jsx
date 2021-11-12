@@ -25,7 +25,7 @@ import DialogTitle from '@mui/material/DialogTitle';
 
 import contract from '../../services/contract';
 
-const degreeTypes = ['Tecnólogo', 'Bacharelado', 'Licenciatura', 'Mestrado', 'Doutorado', 'Pós-doutorado' ]
+const degreeTypes = ['Tecnólogo(a)', 'Bacharel', 'Licenciado(a)', 'Mestre', 'Doutor', 'Pós-doutor' ]
 
 function Course(){
   const [name, setName] = useState('');
