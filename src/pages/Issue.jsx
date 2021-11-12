@@ -67,10 +67,10 @@ function Issue(){
         <Grid item xs={8}>
           <TextField 
             label="Nome" 
+            placeholder="Nome completo do estudante"
             value={studentName}
             onChange={(e) => setStudentName(e.target.value)}
             variant="outlined" 
-            placeholder="Nome completo do estudante"
             fullWidth
           />
         </Grid>
@@ -78,10 +78,10 @@ function Issue(){
         <Grid item xs={4}>
           <TextField 
             label="CPF" 
+            placeholder="CPF do estudante"
             value={studentCPF}
             onChange={(e) => setStudentCPF(e.target.value)}
             variant="outlined" 
-            placeholder="CPF do estudante"
             fullWidth
           />
         </Grid>
@@ -91,10 +91,10 @@ function Issue(){
         <Grid item xs={4}>
           <TextField 
             label="RG" 
+            placeholder="Numero do RG"
             value={studentRGNumber}
             onChange={(e) => setStudentRGNumber(e.target.value)}
             variant="outlined" 
-            placeholder="Numero do RG"
             fullWidth
           />
         </Grid>
@@ -102,10 +102,10 @@ function Issue(){
         <Grid item xs={4}>
           <TextField 
             label="Orgão Expedidor" 
+            placeholder="Orgão expedidor do RG"
             value={studentRGAgency}
             onChange={(e) => setStudentRGAgency(e.target.value)}
             variant="outlined" 
-            placeholder="Orgão expedidor do RG"
             fullWidth
           />
         </Grid>
@@ -113,10 +113,10 @@ function Issue(){
         <Grid item xs={4}>
           <TextField 
             label="UF de Emissão" 
+            placeholder="UF de emissão do RG"
             value={studentRGUF}
             onChange={(e) => setStudentRGUF(e.target.value)}
             variant="outlined" 
-            placeholder="UF de emissão do RG"
             fullWidth
           />
         </Grid>
@@ -126,10 +126,10 @@ function Issue(){
         <Grid item xs={4}>
           <TextField 
             label="Nacionalidade" 
+            placeholder="Nacionalidade do estudante"
             value={studentNationality}
             onChange={(e) => setStudentNationality(e.target.value)}
             variant="outlined" 
-            placeholder="Nacionalidade do estudante"
             fullWidth
           />
         </Grid>
@@ -137,10 +137,10 @@ function Issue(){
         <Grid item xs={4}>
           <TextField 
             label="Naturalidade" 
+            placeholder="Local de nascimento"
             value={studentBirthplace}
             onChange={(e) => setStudentBirthplace(e.target.value)}
             variant="outlined" 
-            placeholder="Local de nascimento"
             fullWidth
           />
         </Grid>
@@ -189,10 +189,10 @@ function Issue(){
         <Grid item xs={4}>
           <TextField 
             label="Processo" 
+            placeholder="Número do processo"
             value={degreeProcess}
             onChange={(e) => setDegreeProcess(e.target.value)}
             variant="outlined" 
-            placeholder="Número do processo"
             fullWidth
           />
         </Grid>
