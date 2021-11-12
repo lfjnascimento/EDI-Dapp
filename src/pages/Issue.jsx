@@ -31,8 +31,6 @@ function Issue(){
   const [courseSelectedId, setCourseSelectedId] = useState('');
 
   async function updateCourses(){
-    console.log('ids:', await contract.getIDS())
-
     const courses = await contract.getCourses();
     setCourses(courses);
     setCourseSelectedId(courses[0].id);
