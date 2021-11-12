@@ -242,7 +242,7 @@ function Issue(){
         </Grid>
 
         <Grid item xs={12}>
-        <TextField 
+          <TextField 
             label="Curso"
             value={courseSelectedId}
             onChange={(e) => setCourseSelectedId(e.target.value)}
