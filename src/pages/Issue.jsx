@@ -246,7 +246,6 @@ function Issue(){
             label="Curso"
             value={courseSelectedId}
             onChange={(e) => setCourseSelectedId(e.target.value)}
-            id="degree-type"
             fullWidth
             select
           >
