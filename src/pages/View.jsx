@@ -1,7 +1,5 @@
 import { useState, useEffect } from 'react';
 
-import { jsPDF } from "jspdf";
-
 import Grid from '@mui/material/Grid';
 import TextField from '@mui/material/TextField';
 import MenuItem from '@mui/material/MenuItem';
@@ -11,6 +9,8 @@ import Box from '@mui/material/Box';
 import Snackbar from '@mui/material/Snackbar';
 
 import contract from '../services/contract';
+import { generateDegreePDF } from '../utils'
+
 
 function View(){
   const [studentCPF, setStudentCPF] = useState('');
@@ -36,6 +36,10 @@ function View(){
 
   function onCloseSnackbar(){
     setOpenSnackbar(false);
+  }
+
+  function onClickGeneratePDF(){
+    generateDegreePDF(degree, courses);
   }
 
   useEffect(() => {
@@ -192,7 +196,16 @@ function View(){
               fullWidth
             />
           </Grid>
-        </Grid>       
+        </Grid>
+
+        <Grid container sx={{mt: 4, flexDirection: "row-reverse"}}>
+        <Button 
+          variant="outlined" 
+          onClick={onClickGeneratePDF} 
+        >
+          gerar PDF
+        </Button>
+      </Grid> 
       </Box>
     </>
   )
