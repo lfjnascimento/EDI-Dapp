@@ -67,13 +67,13 @@ function App() {
 
         <Box sx={{width: '100%', display: 'flex', justifyContent: 'flex-end'}}>
           <Link component={RouterLink} to="/admin" color="background.default" underline="none" sx={{m: 1}}>
-            Admin
+            Admin/
           </Link>
           <Link component={RouterLink} to="/issue" color="background.default" underline="none" sx={{m: 1}}>
-            Emitir
+            Emitir/
           </Link>
           <Link component={RouterLink} to="/view" color="background.default" underline="none" sx={{m: 1}}>
-            Consultar
+            Consultar/
           </Link>
         </Box>
         </Toolbar>
