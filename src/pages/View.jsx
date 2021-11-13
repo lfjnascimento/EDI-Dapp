@@ -74,6 +74,7 @@ function View(){
           <TextField 
             label="Curso"
             value={courseSelectedId}
+            disabled={degreeID.length > 0}
             onChange={(e) => setCourseSelectedId(e.target.value)}
             fullWidth
             select
@@ -103,7 +104,7 @@ function View(){
         <Button 
           variant="text" 
           onClick={onClickGetDegree} 
-          disabled={studentCPF.length === 0 && degreeID.length === 0}
+          disabled={studentCPF.length === 0 && degreeID.length !== 66}
         >
           Consultar
         </Button>
