@@ -4,6 +4,7 @@ import {
   BrowserRouter as Router,
   Route,
   Routes,
+  Navigate,
   Link as RouterLink,
 } from "react-router-dom";
 
@@ -22,6 +23,9 @@ function App() {
   const [userAcc, setUserAcc] = useState('');
   const [isUserLogged, setIsUserLogged] = useState(false);
   const [disableConnectBtn, setDisableConnectBtn] = useState(false);
+
+  const pathname = window.location.pathname;
+  const showBody = isUserLogged || (pathname !== '/admin' && pathname !== '/issue');
 
   function login(userAcc){
     setUserAcc(userAcc);
@@ -77,7 +81,7 @@ function App() {
       
       <Box sx={{display: 'flex', justifyContent: 'center'}}>
         {
-          isUserLogged &&
+          showBody &&
           <Box 
             component="main" 
             sx={{
@@ -88,9 +92,10 @@ function App() {
             
             <Routes>
               <Route path='/' element={<View/>} />
-              <Route path='/Admin' element={<Admin/>} />
+              <Route path='/admin' element={<Admin/>} />
               <Route path='/issue' element={<Issue/>} />
-              <Route path='*' element={<View/>} />
+              <Route path='/view' element={<View/>} />
+              <Route path='*' element={<Navigate to="/"/>} />
             </Routes>
           </Box>
         }
