@@ -14,12 +14,12 @@ export function generateDegreePDF(degree, courses){
   });
   
   const topText = 
-  `REPLUBICA INEXISTENTE DO BRASIL 
-  MINISTÉRIO INEXISTENTE DE EDUCAÇÃO
+  `REPÚBLICA INEXISTENTE DO BRASIL 
+  MINISTÉRIO INEXISTENTE DA EDUCAÇÃO
   INSTITUTO INEXISTENTE DE EDUCAÇÃO DE MATO GROSSO
   criado pela Lei nº 000 de dezembro de 2021, publicado no D.O.U em 12/11/2021.`;
 
-  const middleText1 = `O Diretor Geral do Campus Cuiabá do Insituto Inexistente de Educação de Mato Grosso, \
+  const middleText1 = `O Diretor Geral do Campus Cuiabá do Instituto Inexistente de Educação de Mato Grosso, \
 no uso de suas atribuições e tendo em vista a conclusão do curso de ${course.name.toUpperCase()}, no ano de ${completionDate.getFullYear()}, \
 e a Colação de Grau em ${graduationDate.toLocaleDateString()} confere o Título de`;
   
